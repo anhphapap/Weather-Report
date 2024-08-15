@@ -1,11 +1,11 @@
 #!/bin/bash
 
 today=$(date +"%d-%m-%y")
-weather_report="/home/pha/project/clone_c6/weather_report/raw_data/raw_data_$today.txt"
+weather_report="/home/ec2-user/weather_report/raw_data/raw_data_$today.txt"
 
-curl "wttr.in" > $weather_report
+curl "wttr.in/hochiminh" > $weather_report
 
-temp="/home/pha/project/clone_c6/weather_report/temperatures.txt"
+temp="/home/ec2-user/weather_report/temperatures.txt"
 
 grep °C $weather_report > $temp
 
@@ -22,5 +22,5 @@ month=$(date +%m)
 day=$(date +%d)
 hour=$(date +%H)
 
-echo -e "$year\t$month\t$day\t$hour\t$morning_tmp\t\t$noon_tmp\t\t$evening_tmp\t\t$night_tmp" >> /home/pha/project/clone_c6/weather_report/rx_poc.log
+echo -e "$year\t$month\t$day\t$hour\t$morning_tmp\t\t$noon_tmp\t\t$evening_tmp\t\t$night_tmp" >> /home/ec2-user/weather_report/rx_poc.log
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/pha/project/clone_c6/weather_report
+cd /home/ec2-user/weather_report
 
 day=$(date +%d)
 month=$(date +%m)
